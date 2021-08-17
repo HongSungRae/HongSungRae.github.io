@@ -1,11 +1,7 @@
 ---
 layout: archive
 ---
-<div class="col-lg-4 col-md-2">
-  {% for category in site.categories %}
-    {{ category }}
-  {% endfor %}
-</div>
+
 {{ content }}
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
