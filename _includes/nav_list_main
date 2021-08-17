@@ -15,7 +15,7 @@
         <span class="nav__sub-title">Deep Learning</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "paperrieview" %}
+                    {% if category[0] == "paperreview" %}
                         <li><a href="/categories/a" class="">Papaer Review ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
