@@ -3,7 +3,7 @@ layout: archive
 title: "Neural Machine Translation by Jointly Learning To Align And Translate"
 excerpt: "D Bahdanau et al., ICLR 2015"
 subtitle: " "
-date: 2021-08-23 19:25:00 +0900
+date: 2021-08-23 19:40:00 +0900
 categories: ['paperreview']
 tags: ['RNN','attention']
 comments: true
