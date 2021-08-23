@@ -35,7 +35,7 @@ use_math: true
 
 ### Def 1 (Time Series)
 
-- $\mathcal S_{i} =: \{{s_{i},...s_{M}}\}$ 으로 정의. $s_{i}$는 tuple로 나타내며 $(t_j,z_j,m_j)$으로 각각의 성분을 표현할 수 있다. $m_{j}\in \{1,2...,D\}$으로 $D$는 time series의 dimension. $m$은 modality를 표현한다. 논문에서 예시로 바이탈 사인의 종류들이 여기에 해당됐다. $t$는 시점이고 $z$는 그 시점에서의 관측치
+- $\mathcal S_{i} =: (\{s_{i},...s_{M}\})$ 으로 정의. $s_{i}$는 tuple로 나타내며 $(t_j,z_j,m_j)$으로 각각의 성분을 표현할 수 있다. $m_{j}\in \{1,2...,D\}$으로 $D$는 time series의 dimension. $m$은 modality를 표현한다. 논문에서 예시로 바이탈 사인의 종류들이 여기에 해당됐다. $t$는 시점이고 $z$는 그 시점에서의 관측치
 - 이 방법은 어떠한 정보도 손실하지 않으면서 불규칙하며 결측이 있고 synchronized하지 못하게 관측된 다변량 변수를 set에 저장할 수 있다
 
 ### Def 2 (Dataset)
