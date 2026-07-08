@@ -1,12 +1,31 @@
 # Sungrae Hong — Personal Website
 
-Academic personal homepage hosted on GitHub Pages.
+Original static academic homepage for GitHub Pages.
 
 - **Live site:** https://hongsungrae.github.io/
-- **Edit content:** `index.html` (main page)
-- **Styles:** `css/academic.css`
-- **Scripts:** `js/main.js`
-- **Profile photo:** `authors/admin/profile.jpg`
-- **CV PDF:** upload to `cv/CV.pdf`
+- **License:** MIT (see `LICENSE`)
 
-Design inspired by [kochanha.github.io](https://kochanha.github.io/).
+## Edit guide
+
+| What | Where |
+|------|-------|
+| Main content | `index.html` |
+| Styles | `css/site.css` |
+| Interactions | `js/site.js` |
+| Profile photo | `assets/profile.jpg` |
+| CV PDF | `cv/CV.pdf` |
+
+## Design note
+
+Layout follows a common academic portfolio pattern (profile panel + sectioned content).
+Site code in this repository is original work authored for this homepage.
+
+## Deploy
+
+```bash
+git add -A
+git commit -m "Update homepage"
+git push origin master
+```
+
+GitHub Pages serves static files directly (`.nojekyll` is included).

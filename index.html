@@ -4,285 +4,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Sungrae Hong — Graduate Student at GSDS, KAIST.">
+    <meta name="description" content="Sungrae Hong — Graduate Student at GSDS, KAIST.">
     <meta name="author" content="Sungrae Hong">
     <title>Sungrae Hong</title>
-
-    <link rel="stylesheet" href="./css/academic.css">
+    <link rel="stylesheet" href="./css/site.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <div class="scroll-progress"></div>
-
-    <div class="mobile-header">
-        <a href="#" class="logo">SH.</a>
-        <button class="hamburger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-
-    <div class="page-wrapper">
-
-        <aside class="sidebar">
-            <div class="sidebar-profile">
-                <img src="./authors/admin/profile.jpg" alt="Sungrae Hong" class="profile-img">
-                <h1 class="sidebar-name">Sungrae Hong</h1>
-                <p class="sidebar-title">Graduate Student</p>
-                <p class="sidebar-affiliation">GSDS, KAIST</p>
-            </div>
-
-            <p class="sidebar-interests">
-                Researching <span class="typed-text">Machine Learning</span>
-            </p>
-
-            <div class="sidebar-social">
-                <a href="https://github.com/HongSungRae" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="LinkedIn (N/A)"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="Twitter (N/A)"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:sr5043@kaist.ac.kr" title="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-
-            <div class="sidebar-buttons">
-                <a href="cv/CV.pdf" class="btn btn-primary" target="_blank">
-                    <i class="fas fa-file-alt"></i> Curriculum Vitae
-                </a>
-                <a href="#" class="btn btn-outline" title="Google Scholar (N/A)">
-                    <i class="fas fa-graduation-cap"></i> Google Scholar
-                </a>
-            </div>
-
-            <nav class="sidebar-nav">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand-mark" href="#">Sungrae <span>Hong</span></a>
+            <nav class="topnav" id="site-nav" aria-label="Primary">
                 <a href="#about">About</a>
-                <a href="#news">Latest News</a>
-                <a href="#publications">Publications</a>
+                <a href="#news">News</a>
                 <a href="#experience">Experience</a>
+                <a href="#publications">Publications</a>
                 <a href="#service">Service</a>
                 <a href="#awards">Awards</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-            <div class="sidebar-section">
-                <h3 class="sidebar-section-title">Education</h3>
-                <ul class="sidebar-edu-list">
-                    <li class="sidebar-edu-item">
+    <div class="shell">
+        <div class="layout">
+
+            <main class="content">
+
+                <section id="about" class="block reveal">
+                    <div class="block-head">
+                        <h2>About</h2>
+                    </div>
+                    <p class="lead">
+                        I am a graduate student at <a href="https://gsds.kaist.ac.kr/" target="_blank" rel="noopener">GSDS, KAIST</a>.
+                        My research interests include <strong>Machine Learning</strong>, <strong>Computer Vision</strong>,
+                        and <strong>Medical AI</strong> (N/A — to be updated).
+                    </p>
+                    <div class="meta-row">
+                        <span><i class="fas fa-location-dot"></i>Daejeon, South Korea</span>
+                        <span><i class="fas fa-envelope"></i><a href="mailto:sr5043@kaist.ac.kr">sr5043@kaist.ac.kr</a></span>
+                    </div>
+                    <div class="availability">Open to collaborations</div>
+                </section>
+
+                <section id="news" class="block reveal">
+                    <div class="block-head">
+                        <h2>News</h2>
+                    </div>
+                    <div class="news-feed">
+                        <article class="news-item">
+                            <time datetime="2026-07">Jul 2026</time>
+                            <p>Personal website launched. Content will be updated soon.</p>
+                        </article>
+                        <article class="news-item">
+                            <time datetime="N/A">N/A</time>
+                            <p>N/A — add your news here.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="experience" class="block reveal">
+                    <div class="block-head">
+                        <h2>Experience</h2>
+                    </div>
+                    <div class="experience-list">
+                        <article class="experience-card">
+                            <header>
+                                <h3>Graduate Research Assistant (N/A)</h3>
+                                <time>N/A – Present</time>
+                            </header>
+                            <div class="org">GSDS, KAIST</div>
+                            <p>Advisor: N/A</p>
+                        </article>
+                        <article class="experience-card">
+                            <header>
+                                <h3>Research Intern / Assistant (N/A)</h3>
+                                <time>N/A</time>
+                            </header>
+                            <div class="org">N/A</div>
+                            <p>Details to be added.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="publications" class="block reveal">
+                    <div class="block-head">
+                        <h2>Publications</h2>
+                    </div>
+
+                    <div class="venue-switch" role="tablist" aria-label="Filter publications">
+                        <button class="is-active" type="button" data-filter="all">All</button>
+                        <button type="button" data-filter="cvpr">CVPR</button>
+                        <button type="button" data-filter="miccai">MICCAI</button>
+                        <button type="button" data-filter="eccv">ECCV</button>
+                        <button type="button" data-filter="other">Other</button>
+                    </div>
+
+                    <p class="subsection-label">Selected</p>
+                    <div class="paper-list">
+                        <article class="paper-entry" data-venue="other">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=Preview" alt="Paper preview placeholder">
+                            <div class="paper-body">
+                                <h3>Example Paper Title (N/A)</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">Venue N/A</span>
+                                </div>
+                                <p class="paper-authors"><span class="self">Sungrae Hong</span>, Co-author A, Co-author B</p>
+                                <div class="paper-actions">
+                                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="#"><i class="fas fa-link"></i> Project</a>
+                                    <a href="#"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <p class="subsection-label">Other</p>
+                    <div class="paper-list">
+                        <article class="paper-entry" data-venue="other">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=Preview" alt="Paper preview placeholder">
+                            <div class="paper-body">
+                                <h3>Another Paper Title (N/A)</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">Venue N/A</span>
+                                </div>
+                                <p class="paper-authors">Author A, <span class="self">Sungrae Hong</span>, Author C</p>
+                                <div class="paper-actions">
+                                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="service" class="block reveal">
+                    <div class="block-head">
+                        <h2>Service</h2>
+                    </div>
+                    <div class="service-columns">
+                        <div class="service-card">
+                            <h3>Organizing</h3>
+                            <ul>
+                                <li><strong>N/A</strong> — add organizing roles here.</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h3>Conference Review</h3>
+                            <div class="row"><span>N/A</span><span>N/A</span></div>
+                        </div>
+                        <div class="service-card">
+                            <h3>Journal Review</h3>
+                            <div class="row"><span>N/A</span><span>N/A</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="awards" class="block reveal">
+                    <div class="block-head">
+                        <h2>Awards</h2>
+                    </div>
+                    <div class="awards-grid">
+                        <div class="award-card">
+                            <div class="emoji">🏆</div>
+                            <strong>Award Name (N/A)</strong>
+                            <span>Institution, Year</span>
+                        </div>
+                        <div class="award-card">
+                            <div class="emoji">🎓</div>
+                            <strong>Scholarship (N/A)</strong>
+                            <span>Details</span>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="contact" class="site-footer">
+                    <span>&copy; 2026 Sungrae Hong</span>
+                    <span>GSDS, KAIST · Daejeon, South Korea · <a href="mailto:sr5043@kaist.ac.kr">sr5043@kaist.ac.kr</a></span>
+                </footer>
+
+            </main>
+
+            <aside class="panel reveal">
+                <img class="panel-photo" src="./assets/profile.jpg" alt="Sungrae Hong">
+                <h1 class="panel-name">Sungrae Hong</h1>
+                <p class="panel-role">Graduate Student</p>
+                <p class="panel-org">GSDS, KAIST</p>
+
+                <p class="panel-tagline">Focus: <em id="rotating-focus">Machine Learning</em></p>
+
+                <div class="panel-links">
+                    <a class="action-link" href="cv/CV.pdf" target="_blank" rel="noopener">
+                        <span>Download CV</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a class="action-link secondary" href="#" title="Google Scholar (N/A)">
+                        <span>Google Scholar</span>
                         <i class="fas fa-graduation-cap"></i>
-                        <div class="sidebar-edu-info">
-                            <strong>Graduate Program (N/A)</strong>
-                            <span>GSDS, KAIST</span>
-                            <div class="edu-years">N/A – Present</div>
-                        </div>
-                    </li>
-                    <li class="sidebar-edu-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <div class="sidebar-edu-info">
-                            <strong>Bachelor's Degree (N/A)</strong>
-                            <span>N/A University</span>
-                            <div class="edu-years">N/A – N/A</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
-        <main class="main-content">
-
-            <section id="about" class="about-section reveal">
-                <h2 class="about-heading">About Me</h2>
-                <p class="about-text">
-                    I am a graduate student at <a href="https://gsds.kaist.ac.kr/" target="_blank">GSDS, KAIST</a>.
-                    My research interests include <strong>Machine Learning</strong>, <strong>Computer Vision</strong>,
-                    and <strong>Medical AI</strong> (N/A — to be updated).
-                </p>
-                <div class="about-contact">
-                    <span><i class="fas fa-map-marker-alt"></i> Daejeon, South Korea</span>
-                    <span><i class="fas fa-envelope"></i> <a href="mailto:sr5043@kaist.ac.kr">sr5043@kaist.ac.kr</a></span>
-                </div>
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    Open to Collaborations
-                </div>
-            </section>
-
-            <section id="news" class="section">
-                <div class="section-header reveal">
-                    <h2>Latest News</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="news-list stagger">
-                    <div class="news-row">
-                        <div class="news-date">Jul 2026</div>
-                        <div class="news-text">Personal website launched. Content to be updated.</div>
-                    </div>
-                    <div class="news-row">
-                        <div class="news-date">N/A</div>
-                        <div class="news-text">N/A — add your news here.</div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience" class="section">
-                <div class="section-header reveal">
-                    <h2>Research Experience</h2>
-                    <div class="line"></div>
+                    </a>
                 </div>
 
-                <div class="timeline stagger">
-                    <div class="timeline-item">
-                        <div class="timeline-date">N/A – Present</div>
-                        <div class="timeline-org">GSDS, KAIST</div>
-                        <div class="timeline-role">Graduate Research Assistant (N/A)</div>
-                        <div class="timeline-detail">Advisor: N/A</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">N/A</div>
-                        <div class="timeline-org">N/A</div>
-                        <div class="timeline-role">Research Intern / Assistant (N/A)</div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="publications" class="section">
-                <div class="section-header reveal">
-                    <h2>Publications</h2>
-                    <div class="line"></div>
+                <div class="social-row">
+                    <a class="social-chip" href="https://github.com/HongSungRae" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a class="social-chip" href="#" title="LinkedIn (N/A)"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a class="social-chip" href="mailto:sr5043@kaist.ac.kr"><i class="fas fa-envelope"></i> Email</a>
                 </div>
 
-                <div class="filter-tabs reveal">
-                    <button class="filter-tab active" data-filter="all">All</button>
-                    <button class="filter-tab" data-filter="cvpr">CVPR</button>
-                    <button class="filter-tab" data-filter="miccai">MICCAI</button>
-                    <button class="filter-tab" data-filter="eccv">ECCV</button>
-                    <button class="filter-tab" data-filter="other">Other</button>
+                <p class="panel-edu-title">Education</p>
+                <div class="edu-item">
+                    <strong>Graduate Program (N/A)</strong>
+                    <span>GSDS, KAIST</span>
+                    <time>N/A – Present</time>
                 </div>
-
-                <h3 class="pub-subhead">Selected Publications</h3>
-                <div class="pub-grid stagger">
-
-                    <article class="pub-card" data-venue="other">
-                        <img src="https://placehold.co/640x360/f0ede8/6b6860?text=Paper+Thumbnail" alt="Placeholder"
-                            class="pub-card-img">
-                        <div class="pub-card-body">
-                            <h3>Example Paper Title (N/A)</h3>
-                            <div class="pub-venue">
-                                <span class="pub-venue-tag">Venue N/A</span>
-                            </div>
-                            <div class="pub-authors"><span class="me">Sungrae Hong</span>, Co-author A, Co-author B</div>
-                            <div class="pub-links">
-                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="pub-link"><i class="fas fa-globe"></i> Project</a>
-                                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </article>
-
+                <div class="edu-item">
+                    <strong>Bachelor's Degree (N/A)</strong>
+                    <span>N/A University</span>
+                    <time>N/A – N/A</time>
                 </div>
+            </aside>
 
-                <h3 class="pub-subhead">Other Publications</h3>
-                <div class="pub-grid stagger">
-
-                    <article class="pub-card" data-venue="other">
-                        <img src="https://placehold.co/640x360/f0ede8/6b6860?text=Paper+Thumbnail" alt="Placeholder"
-                            class="pub-card-img">
-                        <div class="pub-card-body">
-                            <h3>Another Paper Title (N/A)</h3>
-                            <div class="pub-venue">
-                                <span class="pub-venue-tag">Venue N/A</span>
-                            </div>
-                            <div class="pub-authors">Author A, <span class="me">Sungrae Hong</span>, Author C</div>
-                            <div class="pub-links">
-                                <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </section>
-
-            <section id="service" class="section">
-                <div class="section-header reveal">
-                    <h2>Academic Service</h2>
-                    <div class="line"></div>
-                </div>
-
-                <div class="service-grid stagger">
-                    <div class="service-block">
-                        <h3 class="service-category">Organizing Committee</h3>
-                        <ul class="service-list">
-                            <li><strong>N/A</strong> — Add organizing roles here.</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-block">
-                        <h3 class="service-category">Conference Reviewer</h3>
-                        <div class="service-table">
-                            <div class="service-row">
-                                <span class="service-name">N/A</span>
-                                <span class="service-years">N/A</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-block">
-                        <h3 class="service-category">Journal Reviewer</h3>
-                        <div class="service-table">
-                            <div class="service-row">
-                                <span class="service-name">N/A</span>
-                                <span class="service-years">N/A</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="awards" class="section">
-                <div class="section-header reveal">
-                    <h2>Awards</h2>
-                    <div class="line"></div>
-                </div>
-
-                <div class="awards-flex stagger">
-                    <div class="award-pill">
-                        <span class="award-icon">🏆</span>
-                        <span class="award-name">Award Name (N/A)</span>
-                        <span class="award-detail">Institution, Year</span>
-                    </div>
-                    <div class="award-pill">
-                        <span class="award-icon">🎓</span>
-                        <span class="award-name">Scholarship (N/A)</span>
-                        <span class="award-detail">Details</span>
-                    </div>
-                </div>
-            </section>
-
-            <footer id="contact">
-                <div class="footer-grid">
-                    <div>
-                        <div class="footer-brand">SH.</div>
-                        <div class="footer-copy">&copy; 2026 Sungrae Hong.</div>
-                    </div>
-                    <div class="footer-contact">
-                        GSDS, KAIST<br>
-                        Daejeon, South Korea<br>
-                        <a href="mailto:sr5043@kaist.ac.kr">sr5043@kaist.ac.kr</a>
-                    </div>
-                </div>
-            </footer>
-
-        </main>
-
+        </div>
     </div>
 
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="floating-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="./js/main.js"></script>
-
+    <script src="./js/site.js"></script>
 </body>
 
 </html>
