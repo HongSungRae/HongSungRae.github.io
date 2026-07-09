@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sungrae Hong — Graduate Student at GSDS, KAIST.">
+    <meta name="description" content="Sungrae Hong — Ph.D. Candidate at GSDS, KAIST. Research in Medical AI, Multiple Instance Learning, and Histopathology.">
     <meta name="author" content="Sungrae Hong">
     <title>Sungrae Hong</title>
     <link rel="stylesheet" href="./css/site.css">
@@ -21,9 +21,9 @@
                 <a href="#news">News</a>
                 <a href="#experience">Experience</a>
                 <a href="#publications">Publications</a>
-                <a href="#service">Service</a>
+                <a href="#projects">Projects</a>
                 <a href="#awards">Awards</a>
-                <a href="#contact">Contact</a>
+                <a href="#service">Service</a>
             </nav>
             <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
@@ -41,9 +41,12 @@
                         <h2>About</h2>
                     </div>
                     <p class="lead">
-                        I am a graduate student at <a href="https://gsds.kaist.ac.kr/" target="_blank" rel="noopener">GSDS, KAIST</a>.
-                        My research interests include <strong>Machine Learning</strong>, <strong>Computer Vision</strong>,
-                        and <strong>Medical AI</strong> (N/A — to be updated).
+                        I am a Ph.D. candidate at <a href="https://gsds.kaist.ac.kr/" target="_blank" rel="noopener">GSDS, KAIST</a>,
+                        advised by <a href="https://munyongyi.info/" target="_blank" rel="noopener">Prof. Mun Yong Yi</a>
+                        in the Knowledge System Lab.
+                        My research focuses on <strong>Medical AI</strong>, especially
+                        <strong>Multiple Instance Learning</strong> for whole-slide and microscopy histopathology,
+                        <strong>uncertainty calibration</strong>, and <strong>multimodal diagnosis systems</strong>.
                     </p>
                     <div class="meta-row">
                         <span><i class="fas fa-location-dot"></i>Daejeon, South Korea</span>
@@ -58,12 +61,28 @@
                     </div>
                     <div class="news-feed">
                         <article class="news-item">
-                            <time datetime="2026-07">Jul 2026</time>
-                            <p>Personal website launched. Content will be updated soon.</p>
+                            <time datetime="2026-06">Jun 2026</time>
+                            <p>Four papers accepted to <strong>MICCAI 2026</strong></p>
                         </article>
                         <article class="news-item">
-                            <time datetime="N/A">N/A</time>
-                            <p>N/A — add your news here.</p>
+                            <time datetime="2026-06">Jun 2026</time>
+                            <p>A paper accepted to <strong>Journal of Intelligent Manufacturing (IF: 7.4)</strong></p>
+                        </article>
+                        <article class="news-item">
+                            <time datetime="2026-02">Feb 2026</time>
+                            <p>A paper accepted to <strong>CVPR 2026</strong></p>
+                        </article>
+                        <article class="news-item">
+                            <time datetime="2025-11">Nov 2025</time>
+                            <p>A paper accepted to <strong>WACV 2026</strong></p>
+                        </article>
+                        <article class="news-item">
+                            <time datetime="2025-08">Aug 2025</time>
+                            <p>A paper accepted to <strong>MICCAI 2026 Workshop</strong></p>
+                        </article>
+                        <article class="news-item">
+                            <time datetime="2025-01">Jan 2025</time>
+                            <p>A paper accepted to <strong>ISBI 2025</strong></p>
                         </article>
                     </div>
                 </section>
@@ -75,19 +94,32 @@
                     <div class="experience-list">
                         <article class="experience-card">
                             <header>
-                                <h3>Graduate Research Assistant (N/A)</h3>
-                                <time>N/A – Present</time>
+                                <h3>Graduate Researcher &amp; Project Manager</h3>
+                                <time>Mar 2024 – Mar 2026</time>
                             </header>
-                            <div class="org">GSDS, KAIST</div>
-                            <p>Advisor: N/A</p>
+                            <div class="org">Knowledge System Lab, GSDS / ISE, KAIST</div>
+                            <p>Multimodal AI-based computer-aided diagnosis for gastrointestinal endoscopic biopsies
+                                (Seegene Medical Foundation). Multiclass and multi-resolution MIL, priority-aware mistake
+                                severity training, and decision making under uncertainty.</p>
                         </article>
                         <article class="experience-card">
                             <header>
-                                <h3>Research Intern / Assistant (N/A)</h3>
-                                <time>N/A</time>
+                                <h3>Graduate Researcher</h3>
+                                <time>Jul 2021 – Feb 2024</time>
                             </header>
-                            <div class="org">N/A</div>
-                            <p>Details to be added.</p>
+                            <div class="org">Knowledge System Lab, GSDS / ISE, KAIST</div>
+                            <p>Next-generation medical diagnosis system based on AI (Seegene Medical Foundation).
+                                Whole-slide segmentation, weakly supervised microscopy pathology classification,
+                                microscopy diagnosis team manager.</p>
+                        </article>
+                        <article class="experience-card">
+                            <header>
+                                <h3>Undergraduate Research Assistant</h3>
+                                <time>Jul 2020 – Jul 2021</time>
+                            </header>
+                            <div class="org">Data Intelligence Lab, IE, Seoultech</div>
+                            <p>Safety monitoring model based on IoT for subminiature sensors (IITP). Time-series modeling
+                                and anomaly detection in sequential data.</p>
                         </article>
                     </div>
                 </section>
@@ -101,24 +133,66 @@
                         <button class="is-active" type="button" data-filter="all">All</button>
                         <button type="button" data-filter="cvpr">CVPR</button>
                         <button type="button" data-filter="miccai">MICCAI</button>
-                        <button type="button" data-filter="eccv">ECCV</button>
+                        <button type="button" data-filter="wacv">WACV</button>
+                        <button type="button" data-filter="isbi">ISBI</button>
                         <button type="button" data-filter="other">Other</button>
                     </div>
 
                     <p class="subsection-label">Selected</p>
                     <div class="paper-list">
-                        <article class="paper-entry" data-venue="other">
-                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=Preview" alt="Paper preview placeholder">
+                        <article class="paper-entry" data-venue="cvpr">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=CVPR+2026" alt="CVPR 2026">
                             <div class="paper-body">
-                                <h3>Example Paper Title (N/A)</h3>
+                                <h3>Every Error has Its Magnitude: Asymmetric Mistake Severity Training for Multiclass Multiple Instance Learning</h3>
                                 <div class="paper-meta">
-                                    <span class="venue-badge">Venue N/A</span>
+                                    <span class="venue-badge">CVPR 2026</span>
                                 </div>
-                                <p class="paper-authors"><span class="self">Sungrae Hong</span>, Co-author A, Co-author B</p>
+                                <p class="paper-authors"><span class="self">Sungrae Hong</span>, Jiwon Jeong, Jisu Shin, Donghee Han, Sol Lee, Kyungeun Kim, Mun Yong Yi</p>
                                 <div class="paper-actions">
-                                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                                    <a href="#"><i class="fas fa-link"></i> Project</a>
-                                    <a href="#"><i class="fab fa-github"></i> Code</a>
+                                    <a href="#" title="Link to be added"><i class="fas fa-file-pdf"></i> PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="paper-entry" data-venue="wacv">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=WACV+2026" alt="WACV 2026">
+                            <div class="paper-body">
+                                <h3>Diagnose Like A Pathologist: An Uncertainty-Focused Approach for Trustworthy Multi-Resolution Multiple Instance Learning</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">WACV 2026</span>
+                                </div>
+                                <p class="paper-authors"><span class="self">Sungrae Hong</span>, Sol Lee, Jisu Shin, Jiwon Jeong, Mun Yong Yi</p>
+                                <div class="paper-actions">
+                                    <a href="#" title="Link to be added"><i class="fas fa-file-pdf"></i> PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="paper-entry" data-venue="miccai">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=MICCAI+WS" alt="MICCAI Workshop">
+                            <div class="paper-body">
+                                <h3>Priority-Aware Clinical Pathology Hierarchy Training for Multiple Instance Learning</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">MICCAI MSB EMERGE 2025</span>
+                                    <span class="venue-badge">Best Paper</span>
+                                </div>
+                                <p class="paper-authors"><span class="self">Sungrae Hong</span>, Kyungeun Kim, Juhyeon Kim, Sol Lee, Jisu Shin, Chanjae Song, Mun Yong Yi</p>
+                                <div class="paper-actions">
+                                    <a href="#" title="Link to be added"><i class="fas fa-file-pdf"></i> PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="paper-entry" data-venue="isbi">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=ISBI+2025" alt="ISBI 2025">
+                            <div class="paper-body">
+                                <h3>Towards Classifying Histopathological Microscope Images as Time Series Data</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">ISBI 2025</span>
+                                </div>
+                                <p class="paper-authors"><span class="self">Sungrae Hong</span>, Hyeongmin Park, Youngsin Ko, Sol Lee, Bryan Wong, Mun Yong Yi</p>
+                                <div class="paper-actions">
+                                    <a href="#" title="Link to be added"><i class="fas fa-file-pdf"></i> PDF</a>
                                 </div>
                             </div>
                         </article>
@@ -126,19 +200,117 @@
 
                     <p class="subsection-label">Other</p>
                     <div class="paper-list">
-                        <article class="paper-entry" data-venue="other">
-                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=Preview" alt="Paper preview placeholder">
+                        <article class="paper-entry" data-venue="cvpr">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=CVPR+WS" alt="CVPR Workshop">
                             <div class="paper-body">
-                                <h3>Another Paper Title (N/A)</h3>
+                                <h3>DRCoD: Toward Robust Continual Learning of Diffusion Models for Tire Manufacturing Prototyping</h3>
                                 <div class="paper-meta">
-                                    <span class="venue-badge">Venue N/A</span>
+                                    <span class="venue-badge">CVPR 2026 AI4RWC Workshop</span>
                                 </div>
-                                <p class="paper-authors">Author A, <span class="self">Sungrae Hong</span>, Author C</p>
-                                <div class="paper-actions">
-                                    <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                                </div>
+                                <p class="paper-authors">Jisu Shin, Sol Lee, <span class="self">Sungrae Hong</span>, A Young Kim, Youngbin You, Jeongheon Park, Jungsoo Oh, Mun Yong Yi</p>
                             </div>
                         </article>
+
+                        <article class="paper-entry" data-venue="isbi">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=ISBI+2025" alt="ISBI 2025">
+                            <div class="paper-body">
+                                <h3>Rethinking Pre-Trained Feature Extractor Selection in MIL for Whole Slide Image Classification</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">ISBI 2025</span>
+                                </div>
+                                <p class="paper-authors">Bryan Wong, <span class="self">Sungrae Hong</span>, Mun Yong Yi</p>
+                            </div>
+                        </article>
+
+                        <article class="paper-entry" data-venue="wacv">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=WACV+2025" alt="WACV 2025">
+                            <div class="paper-body">
+                                <h3>Uncertainty-based Data-wise Label Smoothing for Calibrating MIL in Histopathology Image Classification</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">WACV 2025</span>
+                                    <span class="venue-badge">Oral</span>
+                                </div>
+                                <p class="paper-authors">Hyeongmin Park, <span class="self">Sungrae Hong</span>, Chanjae Song, Jongwoo Kim, Mun Yong Yi</p>
+                            </div>
+                        </article>
+
+                        <article class="paper-entry" data-venue="other">
+                            <img class="paper-thumb" src="https://placehold.co/256x168/e2e8f0/64748b?text=AAAI+WS" alt="AAAI Workshop">
+                            <div class="paper-body">
+                                <h3>TireDiff: A Framework for Conditional Tire Footprint Images Generation from Manufacturing Tabular Data</h3>
+                                <div class="paper-meta">
+                                    <span class="venue-badge">AAAI AI2ASE 2025</span>
+                                </div>
+                                <p class="paper-authors">Sol Lee, Jisu Shin, <span class="self">Sungrae Hong</span>, Chanjae Song, Youngbin Yoo, Jeongheon Park, Jungsoo Oh, Mun Yong Yi</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="projects" class="block reveal">
+                    <div class="block-head">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="experience-list">
+                        <article class="experience-card">
+                            <header>
+                                <h3>Multimodal AI CAD for GI Endoscopic Biopsies</h3>
+                                <time>2024 – 2026</time>
+                            </header>
+                            <div class="org">Seegene Medical Foundation · KAIST</div>
+                            <p>Multiclass and multi-resolution whole-slide MIL, priority-aware mistake severity training,
+                                and uncertainty-aware clinical decision support for gastrointestinal endoscopic biopsy diagnosis.</p>
+                        </article>
+                        <article class="experience-card">
+                            <header>
+                                <h3>Next-Generation AI Medical Diagnosis System</h3>
+                                <time>2021 – 2024</time>
+                            </header>
+                            <div class="org">Seegene Medical Foundation · KAIST</div>
+                            <p>Histopathology whole-slide segmentation, weakly supervised microscopy pathology
+                                classification under noisy labels, and microscopy diagnosis pipeline development.</p>
+                        </article>
+                        <article class="experience-card">
+                            <header>
+                                <h3>IoT-based Safety Monitoring for Subminiature Sensors</h3>
+                                <time>2020 – 2021</time>
+                            </header>
+                            <div class="org">IITP · Seoultech</div>
+                            <p>Time-series modeling and anomaly detection for sequential sensor data in industrial safety monitoring.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="awards" class="block reveal">
+                    <div class="block-head">
+                        <h2>Awards</h2>
+                    </div>
+                    <div class="awards-grid">
+                        <div class="award-card">
+                            <div class="emoji">🏆</div>
+                            <strong>MICCAI MSB EMERGE Workshop</strong>
+                            <span>Best Paper Award · 2025</span>
+                        </div>
+                        <div class="award-card">
+                            <div class="emoji">🏆</div>
+                            <strong>KAIST ISE Research Day</strong>
+                            <span>Excellent Prize · 2024</span>
+                        </div>
+                        <div class="award-card">
+                            <div class="emoji">🥇</div>
+                            <strong>Military AI Competition (MAICON)</strong>
+                            <span>Special Award by GenesisLab · 2023</span>
+                        </div>
+                        <div class="award-card">
+                            <div class="emoji">🏆</div>
+                            <strong>ETRI HUAI Paper Competition</strong>
+                            <span>MSIT Minister's Award · 2022</span>
+                        </div>
+                        <div class="award-card">
+                            <div class="emoji">🥇</div>
+                            <strong>Seoultech IE Capstone Competition</strong>
+                            <span>Grand Prize · 2020</span>
+                        </div>
                     </div>
                 </section>
 
@@ -150,34 +322,15 @@
                         <div class="service-card">
                             <h3>Organizing</h3>
                             <ul>
-                                <li><strong>N/A</strong> — add organizing roles here.</li>
+                                <li><strong>MICCAI Student Board (MSB)</strong> — EMERGE Workshop contributor</li>
                             </ul>
                         </div>
                         <div class="service-card">
                             <h3>Conference Review</h3>
-                            <div class="row"><span>N/A</span><span>N/A</span></div>
-                        </div>
-                        <div class="service-card">
-                            <h3>Journal Review</h3>
-                            <div class="row"><span>N/A</span><span>N/A</span></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="awards" class="block reveal">
-                    <div class="block-head">
-                        <h2>Awards</h2>
-                    </div>
-                    <div class="awards-grid">
-                        <div class="award-card">
-                            <div class="emoji">🏆</div>
-                            <strong>Award Name (N/A)</strong>
-                            <span>Institution, Year</span>
-                        </div>
-                        <div class="award-card">
-                            <div class="emoji">🎓</div>
-                            <strong>Scholarship (N/A)</strong>
-                            <span>Details</span>
+                            <div class="row"><span>CVPR</span><span>2025, 2026</span></div>
+                            <div class="row"><span>MICCAI</span><span>2025</span></div>
+                            <div class="row"><span>WACV</span><span>2025</span></div>
+                            <div class="row"><span>ISBI</span><span>2025</span></div>
                         </div>
                     </div>
                 </section>
@@ -192,17 +345,17 @@
             <aside class="panel reveal">
                 <img class="panel-photo" src="./assets/profile.jpg" alt="Sungrae Hong">
                 <h1 class="panel-name">Sungrae Hong</h1>
-                <p class="panel-role">Graduate Student</p>
+                <p class="panel-role">Ph.D. Candidate</p>
                 <p class="panel-org">GSDS, KAIST</p>
 
-                <p class="panel-tagline">Focus: <em id="rotating-focus">Machine Learning</em></p>
+                <p class="panel-tagline">Focus: <em id="rotating-focus">Medical AI</em></p>
 
                 <div class="panel-links">
-                    <a class="action-link" href="cv/CV.pdf" target="_blank" rel="noopener">
+                    <a class="action-link" href="cv/SungraeHong.pdf" target="_blank" rel="noopener">
                         <span>Download CV</span>
                         <i class="fas fa-arrow-down"></i>
                     </a>
-                    <a class="action-link secondary" href="#" title="Google Scholar (N/A)">
+                    <a class="action-link secondary" href="https://scholar.google.com/citations?user=0Esgb34AAAAJ&hl=ko" target="_blank" rel="noopener">
                         <span>Google Scholar</span>
                         <i class="fas fa-graduation-cap"></i>
                     </a>
@@ -210,20 +363,25 @@
 
                 <div class="social-row">
                     <a class="social-chip" href="https://github.com/HongSungRae" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                    <a class="social-chip" href="#" title="LinkedIn (N/A)"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a class="social-chip" href="https://www.linkedin.com/in/sungrae-hong-1a8804222/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     <a class="social-chip" href="mailto:sr5043@kaist.ac.kr"><i class="fas fa-envelope"></i> Email</a>
                 </div>
 
                 <p class="panel-edu-title">Education</p>
                 <div class="edu-item">
-                    <strong>Graduate Program (N/A)</strong>
+                    <strong>Ph.D. Candidate</strong>
                     <span>GSDS, KAIST</span>
-                    <time>N/A – Present</time>
+                    <time>2023 – Present</time>
                 </div>
                 <div class="edu-item">
-                    <strong>Bachelor's Degree (N/A)</strong>
-                    <span>N/A University</span>
-                    <time>N/A – N/A</time>
+                    <strong>M.S.</strong>
+                    <span>GSDS, KAIST</span>
+                    <time>2021 – 2023</time>
+                </div>
+                <div class="edu-item">
+                    <strong>B.S.</strong>
+                    <span>Industrial Engineering, Seoultech</span>
+                    <time>2015 – 2021</time>
                 </div>
             </aside>
 

@@ -1,9 +1,9 @@
 (function () {
     const focusPhrases = [
-        'Machine Learning',
-        'Computer Vision',
         'Medical AI',
-        'Deep Learning'
+        'Multiple Instance Learning',
+        'Histopathology',
+        'Uncertainty Calibration'
     ];
 
     const nav = document.getElementById('site-nav');
