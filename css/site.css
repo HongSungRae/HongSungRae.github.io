@@ -744,13 +744,21 @@ img {
         justify-content: center;
     }
 
+    .venue-switch {
+        width: 100%;
+        border-radius: 14px;
+    }
+
     .paper-entry {
         grid-template-columns: 1fr;
     }
 
     .paper-thumb {
         width: 100%;
-        height: 160px;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+        background: var(--surface-alt);
     }
 
     .news-item {
@@ -764,5 +772,11 @@ img {
 
     .block {
         padding: 22px 18px 18px;
+    }
+
+    /* Prefer visibility over animation on small screens / tall sections */
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }

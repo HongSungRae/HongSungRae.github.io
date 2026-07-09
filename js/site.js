@@ -66,15 +66,28 @@
     });
 
     if ('IntersectionObserver' in window) {
+        // Use threshold 0 so tall sections (e.g. Publications on mobile)
+        // still become visible when any part enters the viewport.
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
 
         revealEls.forEach((el) => revealObserver.observe(el));
+
+        // Fallback: if a section is already on screen (or taller than the
+        // viewport), force it visible after layout.
+        window.requestAnimationFrame(() => {
+            revealEls.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                const inView = rect.top < window.innerHeight && rect.bottom > 0;
+                if (inView) el.classList.add('is-visible');
+            });
+        });
     } else {
         revealEls.forEach((el) => el.classList.add('is-visible'));
     }
