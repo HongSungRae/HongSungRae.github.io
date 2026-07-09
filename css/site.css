@@ -166,12 +166,16 @@ img {
 }
 
 .panel-photo {
-    width: 112px;
-    height: 112px;
-    object-fit: cover;
+    display: block;
+    width: 148px;
+    height: auto;
+    aspect-ratio: 339 / 405;
+    object-fit: contain;
+    object-position: center;
     border-radius: var(--radius-md);
     border: 3px solid rgba(255, 255, 255, 0.12);
-    margin-bottom: 18px;
+    margin: 0 auto 18px;
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .panel-name {
@@ -640,8 +644,13 @@ img {
 }
 
 .award-card span {
+    display: block;
     color: var(--ink-muted);
     font-size: 0.9rem;
+}
+
+.award-card .paper-actions {
+    margin-top: 12px;
 }
 
 .site-footer {
