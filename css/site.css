@@ -491,13 +491,14 @@ img {
 
 .paper-entry {
     display: grid;
-    grid-template-columns: 128px minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: 156px minmax(0, 1fr);
+    gap: 14px;
     padding: 16px;
     border: 1px solid var(--line);
     border-radius: var(--radius-md);
     background: var(--surface);
     transition: border-color var(--ease), transform var(--ease);
+    align-items: start;
 }
 
 .paper-entry:hover {
@@ -506,9 +507,10 @@ img {
 }
 
 .paper-thumb {
-    width: 128px;
-    height: 84px;
-    object-fit: cover;
+    width: 156px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
     border-radius: var(--radius-sm);
     background: var(--surface-alt);
 }
