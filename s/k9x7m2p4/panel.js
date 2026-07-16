@@ -77,12 +77,19 @@
             }
         });
 
+        const body = await response.text();
         if (!response.ok) {
-            const message = await response.text();
-            throw new Error(message || `Request failed (${response.status})`);
+            let message = body || `Request failed (${response.status})`;
+            try {
+                const parsed = JSON.parse(body);
+                if (parsed.error) message = parsed.error;
+            } catch (_) {
+                // Keep raw body when response is not JSON.
+            }
+            throw new Error(message);
         }
 
-        return response.json();
+        return JSON.parse(body);
     }
 
     function renderRows(tbody, rows, columns, emptyText) {
@@ -193,7 +200,12 @@
 
             statusLine.textContent = `Updated ${new Date().toLocaleString()} · ${range.start} to ${range.end}`;
         } catch (error) {
-            statusLine.textContent = 'Failed to load analytics. Check API token and GoatCounter settings.';
+            const message = error instanceof Error ? error.message : String(error);
+            if (message.includes('stats')) {
+                statusLine.textContent = 'API key needs "Read statistics" permission. Create a new key in GoatCounter → API.';
+            } else {
+                statusLine.textContent = `Failed to load analytics: ${message}`;
+            }
             console.error(error);
         }
     }
