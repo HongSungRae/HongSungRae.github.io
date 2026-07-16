@@ -45,8 +45,10 @@
             .join('');
     }
 
-    function formatDate(date) {
-        return date.toISOString().slice(0, 10);
+    function formatApiDateTime(date) {
+        const copy = new Date(date);
+        copy.setUTCMinutes(0, 0, 0);
+        return copy.toISOString().replace(/\.\d{3}Z$/, 'Z');
     }
 
     function getDateRange() {
@@ -55,14 +57,16 @@
         const start = new Date(end);
 
         if (value === 'all') {
-            start.setFullYear(2020, 0, 1);
+            start.setUTCFullYear(2020, 0, 1);
+            start.setUTCHours(0, 0, 0, 0);
         } else {
-            start.setDate(end.getDate() - Number(value));
+            start.setUTCDate(end.getUTCDate() - Number(value));
+            start.setUTCHours(0, 0, 0, 0);
         }
 
         return {
-            start: formatDate(start),
-            end: formatDate(end)
+            start: formatApiDateTime(start),
+            end: formatApiDateTime(end)
         };
     }
 
@@ -198,7 +202,7 @@
                 'No page data for this period.'
             );
 
-            statusLine.textContent = `Updated ${new Date().toLocaleString()} · ${range.start} to ${range.end}`;
+            statusLine.textContent = `Updated ${new Date().toLocaleString()} · ${range.start.slice(0, 10)} to ${range.end.slice(0, 10)}`;
         } catch (error) {
             const message = error instanceof Error ? error.message : String(error);
             if (message.includes('stats')) {
