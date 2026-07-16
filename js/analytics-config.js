@@ -12,7 +12,7 @@
  *   echo -n 'YOUR_PASSWORD' | sha256sum
  */
 window.SITE_ANALYTICS = {
-    goatcounterEndpoint: '',
-    apiToken: '',
-    panelPasswordHash: '0f4a4fe4ab1a443c32a9c01311007142d96f5d9cde3d3bf57a9b8b3e6997090f'
+    goatcounterEndpoint: 'https://sungraehong.goatcounter.com/count',
+    apiToken: 'y4k73n3ytbk61e1btvcsvzcchj4e9dsga5cua1ej4zdcvg4yea',
+    panelPasswordHash: '952198aa1ba0c69156790dc3d279b0bdb523073e57ba4eb685892d8619e5cb42'
 };
