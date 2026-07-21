@@ -127,14 +127,9 @@
     toggleBackToTop();
 
     const secretStatsLink = document.getElementById('secret-stats-link');
-    const secretStatsTrigger = document.getElementById('panel-photo');
+    const secretStatsTrigger = document.getElementById('panel-photo-trigger');
     const SECRET_STATS_SESSION = 'sr_stats_entry_visible';
-
-    function revealSecretStatsLink() {
-        if (!secretStatsLink) return;
-        secretStatsLink.hidden = false;
-        sessionStorage.setItem(SECRET_STATS_SESSION, '1');
-    }
+    const SECRET_CLICK_WINDOW_MS = 2000;
 
     if (secretStatsLink && secretStatsTrigger) {
         if (sessionStorage.getItem(SECRET_STATS_SESSION) === '1') {
@@ -149,11 +144,12 @@
             window.clearTimeout(secretTimer);
             secretTimer = window.setTimeout(() => {
                 secretClicks = 0;
-            }, 1200);
+            }, SECRET_CLICK_WINDOW_MS);
 
             if (secretClicks >= 3) {
                 secretClicks = 0;
-                revealSecretStatsLink();
+                secretStatsLink.hidden = false;
+                sessionStorage.setItem(SECRET_STATS_SESSION, '1');
             }
         });
     }
