@@ -125,4 +125,36 @@
 
     setActiveNav();
     toggleBackToTop();
+
+    const secretStatsLink = document.getElementById('secret-stats-link');
+    const secretStatsTrigger = document.getElementById('panel-photo');
+    const SECRET_STATS_SESSION = 'sr_stats_entry_visible';
+
+    function revealSecretStatsLink() {
+        if (!secretStatsLink) return;
+        secretStatsLink.hidden = false;
+        sessionStorage.setItem(SECRET_STATS_SESSION, '1');
+    }
+
+    if (secretStatsLink && secretStatsTrigger) {
+        if (sessionStorage.getItem(SECRET_STATS_SESSION) === '1') {
+            secretStatsLink.hidden = false;
+        }
+
+        let secretClicks = 0;
+        let secretTimer = null;
+
+        secretStatsTrigger.addEventListener('click', () => {
+            secretClicks += 1;
+            window.clearTimeout(secretTimer);
+            secretTimer = window.setTimeout(() => {
+                secretClicks = 0;
+            }, 1200);
+
+            if (secretClicks >= 3) {
+                secretClicks = 0;
+                revealSecretStatsLink();
+            }
+        });
+    }
 })();
