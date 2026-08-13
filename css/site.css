@@ -465,11 +465,6 @@ img {
     color: var(--ink-muted);
     font-size: 0.94rem;
 }
-
-.experience-card p + p {
-    margin-top: 8px;
-}
-
 .venue-switch {
     display: inline-flex;
     flex-wrap: wrap;
