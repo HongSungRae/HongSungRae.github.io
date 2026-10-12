@@ -499,7 +499,8 @@ img {
     font-size: 0.82rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--ink-faint);
+    font-weight: 700;
+    color: var(--ink);
     margin: 8px 0 14px;
 }
 
