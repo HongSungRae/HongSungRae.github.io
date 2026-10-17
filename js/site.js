@@ -126,6 +126,35 @@
     setActiveNav();
     toggleBackToTop();
 
+    const viewer = document.getElementById('viewer');
+    const viewerImg = document.getElementById('viewer-img');
+    const viewerPdf = document.getElementById('viewer-pdf');
+    const viewerClose = document.getElementById('viewer-close');
+
+    if (viewer && typeof viewer.showModal === 'function') {
+        document.querySelectorAll('a[data-viewer]').forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                viewerImg.src = link.dataset.viewer;
+                viewerImg.alt = link.dataset.viewerAlt || '';
+                viewerPdf.href = link.getAttribute('href');
+                viewer.showModal();
+                document.body.classList.add('viewer-open');
+            });
+        });
+
+        viewerClose.addEventListener('click', () => viewer.close());
+
+        // Clicking the dimmed backdrop (the dialog itself, outside its content) closes it.
+        viewer.addEventListener('click', (event) => {
+            if (event.target === viewer) viewer.close();
+        });
+
+        viewer.addEventListener('close', () => {
+            document.body.classList.remove('viewer-open');
+        });
+    }
+
     const secretStatsLink = document.getElementById('secret-stats-link');
     const secretStatsTrigger = document.getElementById('panel-photo-trigger');
     const SECRET_STATS_SESSION = 'sr_stats_entry_visible';
