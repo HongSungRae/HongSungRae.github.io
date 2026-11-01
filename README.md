@@ -13,7 +13,7 @@ Original static academic homepage for GitHub Pages.
 | Styles | `css/site.css` |
 | Interactions | `js/site.js` |
 | Profile photo | `assets/profile.jpg` |
-| CV PDF | `cv/CV.pdf` |
+| CV PDF | `cv/Sungrae_Hong_CV.pdf` |
 
 ## Design note
 
